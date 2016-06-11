@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    tools:context="christian.online.prayer.LoginActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/dim150"
+        android:layout_height="@dimen/dim150"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim15"
+        android:src="@drawable/logo_white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim15"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/ivLogo"
+        android:orientation="vertical">
+        <christian.online.prayer.customcontrol.FloatingHintEditText
+            android:id="@+id/fhetRegUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAppName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dim10"
+            android:layout_marginRight="@dimen/dim10"
+            android:backgroundTint="@color/white"
+            android:hint="Name"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_primary_bg" />
+        <christian.online.prayer.customcontrol.FloatingHintEditText
+            android:id="@+id/fhetRegUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAppName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dim10"
+            android:layout_marginRight="@dimen/dim10"
+            android:layout_marginTop="@dimen/dim10"
+            android:backgroundTint="@color/white"
+            android:hint="Email"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_primary_bg" />
+
+        <christian.online.prayer.customcontrol.FloatingHintEditText
+            android:id="@+id/fhetRegPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fhetUserName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dim10"
+            android:layout_marginRight="@dimen/dim10"
+            android:layout_marginTop="@dimen/dim10"
+            android:backgroundTint="@color/white"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_primary_bg" />
+
+        <christian.online.prayer.customcontrol.FloatingHintEditText
+            android:id="@+id/fhetRegConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fhetPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dim10"
+            android:layout_marginRight="@dimen/dim10"
+            android:layout_marginTop="@dimen/dim10"
+            android:backgroundTint="@color/white"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_primary_bg" />
+
+        <TextView
+            android:id="@+id/tvCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fhetPassword"
+            android:layout_margin="@dimen/dim10"
+            android:elevation="@dimen/dim2"
+            android:background="@drawable/bg_login_selector"
+            android:gravity="center"
+            android:text="Create Account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimTex18" />
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dim10"
+            android:paddingBottom="@dimen/dim10"
+            android:text="Already have an account? Login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimTex20"
+            android:gravity="center"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_black"
+        android:layout_above="@+id/rlBottomButtons"
+        android:visibility="gone">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/dim50"
+            android:layout_height="@dimen/dim50"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

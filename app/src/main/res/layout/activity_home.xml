@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_bg"
+    tools:context="christian.online.prayer.HomeActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/appbar" />
+
+    <RelativeLayout
+        android:id="@+id/llTop"
+        android:layout_width="@dimen/dimUpW"
+        android:layout_height="@dimen/dimUpH"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/up">
+
+        <TextView
+            android:id="@+id/tvTimeRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dim10"
+            android:text="WELCOME"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimTex70" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlMiddle"
+        android:layout_width="@dimen/dimUpW"
+        android:layout_height="@dimen/dimMiddleH"
+        android:layout_below="@+id/llTop"
+        android:background="@drawable/middle"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvNPTR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TO ONLINE PRAYER"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimTex20" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llLowerMiddle"
+        android:layout_width="@dimen/dimUpW"
+        android:layout_height="@dimen/dimBottomH"
+        android:layout_below="@+id/rlMiddle"
+        android:background="@drawable/bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dim30"
+        android:paddingRight="@dimen/dim30">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next Prayer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimTex15" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimTex15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Day"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimTex15" />
+
+            <TextView
+                android:id="@+id/tvDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimTex15" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlBottomButtons"
+            android:background="@color/color_niil"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dim5"
+            android:paddingTop="@dimen/dim5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dim10"
+                android:text="To join prayer, install GoTo Meeting from PlayStore"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimTex12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTextBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlBottomButtons"
+            android:background="@color/color_ashmani"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dim3"
+            android:paddingTop="@dimen/dim3">
+
+            <TextView
+                android:id="@+id/tvJoinPrayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dim10"
+                android:text="Enter Meeting ID"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimTex18" />
+
+            <TextView
+                android:id="@+id/tvInstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_install"
+                android:text="422877381"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimTex18" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim60"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorHomeBotom"
+            android:padding="@dimen/dim5">
+
+
+            <ImageView
+                android:id="@+id/ivGotoMeeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/dim5"
+                android:src="@drawable/ic_btn_goto" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

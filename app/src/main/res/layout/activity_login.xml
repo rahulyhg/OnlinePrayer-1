@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    tools:context="christian.online.prayer.LoginActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/dim150"
+        android:layout_height="@dimen/dim150"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim15"
+        android:src="@drawable/logo_white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim15"
+        android:layout_below="@+id/ivLogo"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <christian.online.prayer.customcontrol.FloatingHintEditText
+            android:id="@+id/fhetUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAppName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dim10"
+            android:layout_marginRight="@dimen/dim10"
+            android:backgroundTint="@color/white"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_primary_bg" />
+
+        <christian.online.prayer.customcontrol.FloatingHintEditText
+            android:id="@+id/fhetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fhetUserName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dim10"
+            android:layout_marginRight="@dimen/dim10"
+            android:layout_marginTop="@dimen/dim10"
+            android:backgroundTint="@color/white"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_primary_bg" />
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fhetPassword"
+            android:layout_margin="@dimen/dim10"
+            android:elevation="@dimen/dim2"
+            android:background="@drawable/bg_login_selector"
+            android:gravity="center"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimTex18" />
+
+        <TextView
+            android:id="@+id/tvCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dim10"
+            android:paddingBottom="@dimen/dim10"
+            android:text="Create account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimTex20"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvLoginWithFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login with facebook"
+            android:textSize="@dimen/dimTex18"
+            android:textColor="@color/white"
+            android:elevation="@dimen/dim2"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/dim15"
+            android:background="@drawable/bg_facebook_selector"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:drawablePadding="@dimen/dim15"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rlProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_black"
+        android:layout_above="@+id/rlBottomButtons">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/dim50"
+            android:layout_height="@dimen/dim50"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

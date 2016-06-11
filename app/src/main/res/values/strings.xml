@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">OnlinePrayers.org</string>
+    <!-- Internet Check -->
+    <string name="con_title">Connectivity Settings</string>
+    <string name="con_message">You need_alarm Internet to use Christendom</string>
+    <string name="settings">Settings</string>
+    <string name="dismiss">Dismiss</string>
+
+    <!-- Facebook -->
+    <string name="facebook_app_id">1269337009761793</string>
+
+    <!-- notification -->
+    <string name="notification_title">OnlinePrayers.org</string>
+    <string name="notification_subject">1 hour Till next Prayer!</string>
+
+</resources>
