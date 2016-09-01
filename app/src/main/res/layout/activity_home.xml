@@ -105,10 +105,46 @@
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/llBottom"
+        android:layout_marginBottom="@dimen/dim10"
+        android:gravity="center">
+
+        <Button
+            android:padding="@dimen/dim10"
+            android:id="@+id/ivPrayerResources"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRAYER RESOURCE"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginRight="@dimen/dim30"
+            android:background="@drawable/ic_button_webview" />
+
+
+        <Button
+            android:padding="@dimen/dim10"
+            android:id="@+id/ivPrayerDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 DAYS PRAYERS"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="@drawable/ic_button_webview"/>
+
+    </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:id="@+id/llBottom"
         android:orientation="vertical">
 
         <LinearLayout
@@ -171,13 +207,13 @@
             android:padding="@dimen/dim5">
 
 
-            <ImageView
+            <Button
                 android:id="@+id/ivGotoMeeting"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="@dimen/dim5"
-                android:src="@drawable/ic_btn_goto" />
+                android:background="@drawable/ic_btn_goto" />
 
         </RelativeLayout>
     </LinearLayout>

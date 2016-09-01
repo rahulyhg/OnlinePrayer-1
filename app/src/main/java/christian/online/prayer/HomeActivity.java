@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,10 +37,15 @@ public class HomeActivity extends AppCompatActivity implements CounterClass.OnTi
 
     public static String TAG = HomeActivity.class.getSimpleName();
     private TextView tvTimeRemaining, tvDay, tvTime, tvNPTR, tvJoinPrayer, tvInstall;
-    private ImageView ivGotoMeeting;
+    private Button ivGotoMeeting;
+    private Button ivPrayerResources,ivPrayerDays;
     private Toolbar mytoolbar;
     private SessionManager session;
     long notificationTIme;
+
+    private static String URL1 = "http://onlineprayers.org/online-library-resources/";
+    private static String URL2 = "http://onlineprayers.org/30-days-fasting-and-prayers/";
+    public static String WEB_URL = "web_url";
 
     public AlarmManager alarmManager;
     PendingIntent pendingIntent;
@@ -106,7 +112,9 @@ public class HomeActivity extends AppCompatActivity implements CounterClass.OnTi
         tvNPTR = (TextView) findViewById(R.id.tvNPTR);
         tvJoinPrayer = (TextView) findViewById(R.id.tvJoinPrayer);
         tvInstall = (TextView) findViewById(R.id.tvInstall);
-        ivGotoMeeting = (ImageView) findViewById(R.id.ivGotoMeeting);
+        ivGotoMeeting = (Button) findViewById(R.id.ivGotoMeeting);
+        ivPrayerResources = (Button) findViewById(R.id.ivPrayerResources);
+        ivPrayerDays = (Button) findViewById(R.id.ivPrayerDays);
     }
 
     private void setTypeFaces() {
@@ -152,6 +160,26 @@ public class HomeActivity extends AppCompatActivity implements CounterClass.OnTi
             @Override
             public void onClick(View v) {
                 gotoMeeting();
+            }
+        });
+
+        ivPrayerResources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context,WebViewActivity.class);
+                i.putExtra(WEB_URL,URL1);
+              //  Log.e(WEB_URL,URL1);
+                startActivity(i);
+            }
+        });
+
+        ivPrayerDays.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context,WebViewActivity.class);
+                i.putExtra(WEB_URL,URL2);
+               // Log.e(WEB_URL,URL2);
+                startActivity(i);
             }
         });
     }
